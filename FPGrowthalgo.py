@@ -139,30 +139,30 @@ def build_product_tree():
 
     return orignalroot
 
-def fpchart():
-    ItemSet=[]
-    ConditionalPatternBase=[]
-    ConditionalFPTree=[]
-    FrePatternGen=[]
+# def fpchart():
+#     ItemSet=[]
+#     ConditionalPatternBase=[]
+#     ConditionalFPTree=[]
+#     FrePatternGen=[]
 
-    for i in acelist:
-        if (self.data == i):
+#     for i in acelist:
+#         if (self.data == i):
 
-        else:
-    def print_tree(self):
-        if (self.data == i):
+#         else:
+#     def print_tree(self):
+#         if (self.data == i):
 
-        else:
-        spaces = ' ' * self.get_level() * 3
-        prefix = spaces + "|__" if self.parent else ""
-        print(prefix + str(self.data) + str(self.cnt))
-        if self.children:
-            for child in self.children:
-                child.print_tree()
+#         else:
+#         spaces = ' ' * self.get_level() * 3
+#         prefix = spaces + "|__" if self.parent else ""
+#         print(prefix + str(self.data) + str(self.cnt))
+#         if self.children:
+#             for child in self.children:
+#                 child.print_tree()
 
     root.print_tree()
 
 root = build_product_tree()
 
 root.print_tree()
-fpchart()
+#fpchart()
