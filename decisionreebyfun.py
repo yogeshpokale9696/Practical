@@ -17,6 +17,7 @@ print(data.head())
 df = pd.DataFrame(data)
 print("dataframe is:",df)
 feature_cols = list(df[[ 'Outlook' ,'Temperature', 'Humidity' , 'Windy']])
+
 label1 = preprocessing.LabelEncoder()
 df=df.apply(label1.fit_transform)
 print(label1)
@@ -40,8 +41,12 @@ Accuracy = metrics.accuracy_score(y_test,y_pred)
 print("Accuracy is : ", Accuracy*100)
 print("confusion matrix",y_test,y_pred)
 
+Q=input("\Select Outlook \n0.Overcast \n1.Rainy \n2.Sunny")
+T=input("\Select Temperature \n0.cool \n1.hot \n2.mild")
+H=input("\Select Temperature \n0.High \n1.Normal ")
+W=input("\Select Temperature \n0.False \n1.True ")
 
-if(clf.predict([[2 ,1 ,0 ,0]])):
+if(clf.predict([[Q ,T ,H ,W]])):
     print("yes , we can play")
 else:
     print("no, we can not play")
@@ -53,4 +58,3 @@ export_graphviz(clf, out_file=dot_data,
 graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
 graph.write_png('image2.png')
 Image(graph.create_png())
-
